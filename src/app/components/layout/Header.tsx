@@ -1,6 +1,6 @@
 'use client';
 import Link from "next/link";
-import Modal from "../Modal";
+import CreateModal from "../CreateModal";
 import { useState } from "react";
 
 export default function Header() {
@@ -16,7 +16,7 @@ export default function Header() {
           <span className="text-sm">+ Create Task</span>
         </button>
 
-        {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
+        {isModalOpen && <CreateModal setIsModalOpen={setIsModalOpen} />}
       </div>
     </header>
   );

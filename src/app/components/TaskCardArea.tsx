@@ -28,11 +28,5 @@ export default function TaskCardArea() {
         ))} 
       </div>
     </div>
-
-    // <div>
-    //   {TaskList.map((task) => (
-    //     <TaskCard key={task.id} {...task} />
-    //   ))}
-    // </div>
   );
 }
