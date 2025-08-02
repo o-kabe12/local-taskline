@@ -1,9 +1,14 @@
+'use client';
 import TaskCard from "./TaskCard";
-import { MOCK_TASKS } from "../lib/mockData";
+// import { MOCK_TASKS } from "../lib/mockData";
+import { useTaskStore } from "../lib/store";
 
 
 export default function TaskCardArea() {
-  const TaskList= MOCK_TASKS;
+  // const TaskList= MOCK_TASKS;
+
+  const TaskList = useTaskStore((state) => state.tasks);
+
   
   return (
     <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mt-4">

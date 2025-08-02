@@ -5,14 +5,16 @@ LocalTasklineは、ローカル完結型のミニマルなタスク管理アプ�
 
 ---
 
-## 🔧 使用技術
+## 🧑‍💻 使用技術
 
-- **Next.js 15 (App Router)**
-- **TypeScript**
-- **Tailwind CSS**
-- **localStorage**（データ永続化）
-
----
+| カテゴリ | 技術 |
+|----------|------|
+| フレームワーク | [Next.js 15 (App Router)](https://nextjs.org/) |
+| 言語 | TypeScript |
+| スタイリング | [Tailwind CSS](https://tailwindcss.com/) |
+| 状態管理 | [Zustand](https://github.com/pmndrs/zustand) |
+| ID生成 | [uuid](https://www.npmjs.com/package/uuid)（v4） |
+| データ保存 | localStorage（Zustandで永続化） |
 
 ## ✨ 主な機能
 

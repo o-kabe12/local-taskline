@@ -13,7 +13,7 @@ export default function Header() {
           <h1 className="w-fit text-xl font-bold">Local Taskline</h1>
         </Link>
         <button className="bg-blue-500 text-white px-4 py-2 rounded-md md:cursor-pointer md:hover:opacity-70 md:transition-opacity md:duration-400" onClick={() => setIsModalOpen(true)}>
-          <span className="text-sm">+ Create Task</span>
+          <span className="text-sm">+ 新規作成</span>
         </button>
 
         {isModalOpen && <CreateModal setIsModalOpen={setIsModalOpen} />}
