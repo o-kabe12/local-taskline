@@ -2,8 +2,11 @@ import { useState } from "react";
 import { useTaskStore } from "../lib/store";
 import { Task } from "../lib/types";
 import { v4 as uuidv4 } from "uuid";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function CreateModal({ setIsModalOpen }: { setIsModalOpen: (value: boolean) => void }) {
+  const router = useRouter();
+  const pathname = usePathname();
   const addTask = useTaskStore((state) => state.addTask);
   const [formData, setFormData] = useState<Omit<Task, "id" | "createdAt">>({
     title: "",
@@ -29,6 +32,12 @@ export default function CreateModal({ setIsModalOpen }: { setIsModalOpen: (value
 
     addTask(newTask);
     setIsModalOpen(false);
+
+    if (pathname !== '/') {
+      router.push('/');
+    }else{
+      return;
+    }
   };
 
   return (
