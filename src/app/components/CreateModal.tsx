@@ -44,8 +44,8 @@ export default function CreateModal({ setIsModalOpen }: { setIsModalOpen: (value
     <div className="fixed inset-0 bg-black/70 flex justify-center items-center">
       <div className="bg-white p-4 rounded-md w-[90%] max-w-xl">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-black text-lg font-bold">Create Task</h2>
-          <button className="bg-red-500 text-white px-4 py-2 rounded-md md:cursor-pointer md:hover:opacity-70 md:transition-opacity md:duration-400" onClick={() => setIsModalOpen(false)}>Close</button>
+          <h2 className="text-black text-lg font-bold">タスク作成</h2>
+          <button className="bg-red-500 text-white px-4 py-2 rounded-md md:cursor-pointer md:hover:opacity-70 md:transition-opacity md:duration-400" onClick={() => setIsModalOpen(false)}>閉じる</button>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input name="title" value={formData.title} onChange={handleChange} placeholder="Title" className="border p-2 text-black" required />

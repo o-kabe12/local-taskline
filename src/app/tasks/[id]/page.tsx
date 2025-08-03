@@ -21,20 +21,20 @@ export default function TaskDetailPage({ params }: { params: Promise<{ id: strin
   const displayDueDate = task?.dueDate ? new Date(task.dueDate).toLocaleDateString("ja-JP") : null;
 
   if (!task) {
-    return <div>Task not found</div>;
+    return <div>タスクが見つかりません</div>;
   }
   
   return (
     <div className="max-w-[1200px] mx-auto p-6 min-h-screen">
       <div className="bg-white shadow-lg rounded-lg p-6 w-full">
-        <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">{task.title}</h1>
-          <div className="flex gap-2">
+        <div className="md:flex md:justify-between md:items-center">
+          <h1 className="text-3xl font-bold text-gray-800">{task.title}</h1>
+          <div className="flex gap-2 md:mt-0 mt-4">
               <button className="bg-blue-500 text-white px-4 py-2 rounded-md md:cursor-pointer md:hover:opacity-70 md:transition-opacity md:duration-400" onClick={() => setIsModalOpen(true)}>編集</button>
               <button className="bg-red-500 text-white px-4 py-2 rounded-md md:cursor-pointer md:hover:opacity-70 md:transition-opacity md:duration-400" onClick={() => setIsDeleteModalOpen(true)}>削除</button>
           </div>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 md:mt-0 mt-4">
           <p className="text-lg text-gray-600">{task.description}</p>
           <div className="flex items-center space-x-2">
             <span className="font-semibold text-gray-700">状態:</span>

@@ -50,13 +50,13 @@ export default function EditModal({
     setIsModalOpen(false);
   };
 
-  if (!targetTask) return <div className="text-white">Task not found</div>;
+  if (!targetTask) return <div className="text-white">タスクが見つかりません</div>;
 
   return (
     <div className="fixed inset-0 bg-black/70 flex justify-center items-center">
       <div className="bg-white p-4 rounded-md w-[90%] max-w-xl">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-black text-lg font-bold mb-4">Edit Task</h2>
+          <h2 className="text-black text-lg font-bold">タスク編集</h2>
           <button className="bg-red-500 text-white px-4 py-2 rounded-md md:cursor-pointer md:hover:opacity-70 md:transition-opacity md:duration-400" onClick={() => setIsModalOpen(false)}>閉じる</button>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
