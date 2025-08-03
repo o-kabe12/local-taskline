@@ -17,6 +17,9 @@ export default function TaskDetailPage({ params }: { params: Promise<{ id: strin
 
   const task = useTaskStore((state) => state.tasks.find((task) => task.id === id));
 
+  const displayCreatedAt = task?.createdAt ? new Date(task.createdAt).toLocaleDateString("ja-JP") : null;
+  const displayDueDate = task?.dueDate ? new Date(task.dueDate).toLocaleDateString("ja-JP") : null;
+
   if (!task) {
     return <div>Task not found</div>;
   }
@@ -42,11 +45,11 @@ export default function TaskDetailPage({ params }: { params: Promise<{ id: strin
           <div className="grid grid-cols-2 gap-4">
             <div>
               <span className="block font-semibold text-gray-700">作成日:</span>
-              <span className="text-gray-600">{task.createdAt}</span>
+              <span className="text-gray-600">{displayCreatedAt}</span>
             </div>
             <div>
               <span className="block font-semibold text-gray-700">期限:</span>
-              <span className="text-gray-600">{task.dueDate}</span>
+              <span className="text-gray-600">{displayDueDate}</span>
             </div>
           </div>
           <div>
